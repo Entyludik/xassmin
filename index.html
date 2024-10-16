@@ -216,23 +216,40 @@
                 }
             }
 
-            #container {
-                display: grid;
-                grid-template-columns: repeat(5, 1fr);
-                grid-template-rows: repeat(5, 1fr);
-                gap: 2%;
-                width: 70vw;
-                height: 70vw;
-                max-width: 300px;
-                max-height: 300px;
-                background-color: #1c2530;
-                border-radius: 20px;
-                padding: 3%;
-                box-sizing: border-box;
-                position: relative;
-                overflow: hidden;
-                margin: 0 auto 20px auto;
-            }
+#container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 2%;
+    width: 70vw;
+    height: 70vw;
+    max-width: 300px;
+    max-height: 300px;
+    background-color: #1c2530;
+    background-image: url('tg.png'); /* Фоновое изображение */
+    background-size: cover; /* Растягивает изображение по контейнеру */
+    background-position: center; /* Центрирует изображение */
+    border-radius: 20px;
+    padding: 3%;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto 20px auto;
+}
+
+/* Стили для текста */
+#mentor-text {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    z-index: 10; /* Текст будет отображаться поверх сетки */
+}
+
 
             .square-wrapper {
                 position: relative;
@@ -469,6 +486,28 @@
             }
         }
 
+.game-title-container {
+    display: flex;
+    align-items: center; /* Центрируем элементы по вертикали */
+}
+
+.game-title-container img {
+    width: 40px; /* Настройте размер изображения по необходимости */
+    height: auto;
+    margin-right: 10px; /* Отступ между изображением и текстом */
+}
+
+.game-title {
+    font-family: 'Intro', Arial, sans-serif;
+    font-size: 2.0em;
+    font-weight: bold;
+    margin: 0; /* Убираем отступы сверху и снизу */
+    color: white; /* Цвет текста белый */
+    animation: float 6s infinite ease-in-out, backgroundShift 10s infinite linear;
+}
+
+
+
         /* Убираем синий эффект выделения при нажатии на мобильных устройствах */
         button, select, input, textarea, a {
             -webkit-tap-highlight-color: transparent;
@@ -481,16 +520,50 @@
             -webkit-touch-callout: none; /* Отключает вызов меню на долгий тап */
         }
     </style>
+
+<div class="game-title-container">
+    <img src="tg.png" alt="Telegram logo">
+    <div class="game-title">Mentor_casino</div>
+</div>
+
 <style type="text/css">.vue-slider-dot{position:absolute;-webkit-transition:all 0s;transition:all 0s;z-index:5}.vue-slider-dot:focus{outline:none}.vue-slider-dot-tooltip{position:absolute;visibility:hidden}.vue-slider-dot-hover:hover .vue-slider-dot-tooltip,.vue-slider-dot-tooltip-show{visibility:visible}.vue-slider-dot-tooltip-top{top:-10px;left:50%;-webkit-transform:translate(-50%,-100%);transform:translate(-50%,-100%)}.vue-slider-dot-tooltip-bottom{bottom:-10px;left:50%;-webkit-transform:translate(-50%,100%);transform:translate(-50%,100%)}.vue-slider-dot-tooltip-left{left:-10px;top:50%;-webkit-transform:translate(-100%,-50%);transform:translate(-100%,-50%)}.vue-slider-dot-tooltip-right{right:-10px;top:50%;-webkit-transform:translate(100%,-50%);transform:translate(100%,-50%)}</style><style type="text/css">.vue-slider-marks{position:relative;width:100%;height:100%}.vue-slider-mark{position:absolute;z-index:1}.vue-slider-ltr .vue-slider-mark,.vue-slider-rtl .vue-slider-mark{width:0;height:100%;top:50%}.vue-slider-ltr .vue-slider-mark-step,.vue-slider-rtl .vue-slider-mark-step{top:0}.vue-slider-ltr .vue-slider-mark-label,.vue-slider-rtl .vue-slider-mark-label{top:100%;margin-top:10px}.vue-slider-ltr .vue-slider-mark{-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%)}.vue-slider-ltr .vue-slider-mark-step{left:0}.vue-slider-ltr .vue-slider-mark-label{left:50%;-webkit-transform:translateX(-50%);transform:translateX(-50%)}.vue-slider-rtl .vue-slider-mark{-webkit-transform:translate(50%,-50%);transform:translate(50%,-50%)}.vue-slider-rtl .vue-slider-mark-step{right:0}.vue-slider-rtl .vue-slider-mark-label{right:50%;-webkit-transform:translateX(50%);transform:translateX(50%)}.vue-slider-btt .vue-slider-mark,.vue-slider-ttb .vue-slider-mark{width:100%;height:0;left:50%}.vue-slider-btt .vue-slider-mark-step,.vue-slider-ttb .vue-slider-mark-step{left:0}.vue-slider-btt .vue-slider-mark-label,.vue-slider-ttb .vue-slider-mark-label{left:100%;margin-left:10px}.vue-slider-btt .vue-slider-mark{-webkit-transform:translate(-50%,50%);transform:translate(-50%,50%)}.vue-slider-btt .vue-slider-mark-step{top:0}.vue-slider-btt .vue-slider-mark-label{top:50%;-webkit-transform:translateY(-50%);transform:translateY(-50%)}.vue-slider-ttb .vue-slider-mark{-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%)}.vue-slider-ttb .vue-slider-mark-step{bottom:0}.vue-slider-ttb .vue-slider-mark-label{bottom:50%;-webkit-transform:translateY(50%);transform:translateY(50%)}.vue-slider-mark-label,.vue-slider-mark-step{position:absolute}</style><style type="text/css">.vue-slider{position:relative;-webkit-box-sizing:content-box;box-sizing:content-box;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;display:block;-webkit-tap-highlight-color:rgba(0,0,0,0)}.vue-slider-rail{position:relative;width:100%;height:100%;-webkit-transition-property:width,height,left,right,top,bottom;transition-property:width,height,left,right,top,bottom}.vue-slider-process{position:absolute;z-index:1}</style><style>@import url("chrome-extension://adlpodnneegcnbophopdmhedicjbcgco/content/styles.css");</style></head>
 <body>
     <header>
 
         <span>Mentor_Casino</span>
     </header>
-    <canvas id="particleCanvas" width="1920" height="932"></canvas> <!-- Добавленный элемент canvas -->
-    <div id="notification" style="display: none; z-index: 10000;" class="fade-out">Пожалуйста, подождите 5 секунд перед следующим нажатием.</div>
+<canvas id="particleCanvas" width="1920" height="932"></canvas> <!-- Canvas для частиц -->
 
-    <div id="container"><div class="square-wrapper"><div class="square"></div><img class="icon" src="minesstar.svg" alt="icon"></div><div class="square-wrapper"><div class="square"></div><img class="icon" src="minesstar.svg" alt="icon"></div><div class="square-wrapper"><div class="square"></div><img class="icon" src="minesstar.svg" alt="icon"></div><div class="square-wrapper"><div class="square"></div><img class="icon" src="minesstar.svg" alt="icon"></div><div class="square-wrapper"><div class="square"></div><img class="icon" src="minesstar.svg" alt="icon"></div><div class="square-wrapper"><div class="explode-wrapper" style="width: 95.8906px; height: 95.9062px; margin: 0px; position: absolute; inset: 0px; float: none; display: block;"><canvas width="200" height="1600" style="position: absolute; inset: -752.047px -52.0547px; margin: auto; width: 200px; height: 1600px;"></canvas></div><img class="icon" src="minesstar.svg" alt="icon"></div><div class="square-wrapper"><div class="explode-wrapper" style="width: 95.9062px; height: 95.9062px; margin: 0px; position: absolute; inset: 0px; float: none; display: block;"><canvas width="200" height="1600" style="position: absolute; inset: -752.047px -52.0469px; margin: auto; width: 200px; height: 1600px;"></canvas></div><img class="icon" src="minesstar.svg" alt="icon"></div><div class="square-wrapper"><div class="square"></div><img class="icon" src="minesstar.svg" alt="icon"></div><div class="square-wrapper"><div class="square"></div><img class="icon" src="minesstar.svg" alt="icon"></div><div class="square-wrapper"><div class="square"></div><img class="icon" src="minesstar.svg" alt="icon"></div><div class="square-wrapper"><div class="square"></div><img class="icon" src="minesstar.svg" alt="icon"></div><div class="square-wrapper"><div class="square"></div><img class="icon" src="minesstar.svg" alt="icon"></div><div class="square-wrapper"><div class="explode-wrapper" style="width: 95.8906px; height: 95.8906px; margin: 0px; position: absolute; inset: 0px; float: none; display: block;"><canvas width="200" height="1600" style="position: absolute; inset: -752.055px -52.0547px; margin: auto; width: 200px; height: 1600px;"></canvas></div><img class="icon" src="minesstar.svg" alt="icon"></div><div class="square-wrapper"><div class="square"></div><img class="icon" src="minesstar.svg" alt="icon"></div><div class="square-wrapper"><div class="square"></div><img class="icon" src="minesstar.svg" alt="icon"></div><div class="square-wrapper"><div class="square"></div><img class="icon" src="minesstar.svg" alt="icon"></div><div class="square-wrapper"><div class="explode-wrapper" style="width: 95.9062px; height: 95.9062px; margin: 0px; position: absolute; inset: 0px; float: none; display: block;"><canvas width="200" height="1600" style="position: absolute; inset: -752.047px -52.0469px; margin: auto; width: 200px; height: 1600px;"></canvas></div><img class="icon" src="minesstar.svg" alt="icon"></div><div class="square-wrapper"><div class="square"></div><img class="icon" src="minesstar.svg" alt="icon"></div><div class="square-wrapper"><div class="square"></div><img class="icon" src="minesstar.svg" alt="icon"></div><div class="square-wrapper"><div class="square"></div><img class="icon" src="minesstar.svg" alt="icon"></div><div class="square-wrapper"><div class="explode-wrapper" style="width: 95.8906px; height: 95.9062px; margin: 0px; position: absolute; inset: 0px; float: none; display: block;"><canvas width="200" height="1600" style="position: absolute; inset: -752.047px -52.0547px; margin: auto; width: 200px; height: 1600px;"></canvas></div><img class="icon" src="minesstar.svg" alt="icon"></div><div class="square-wrapper"><div class="square"></div><img class="icon" src="minesstar.svg" alt="icon"></div><div class="square-wrapper"><div class="square"></div><img class="icon" src="minesstar.svg" alt="icon"></div><div class="square-wrapper"><div class="square"></div><img class="icon" src="minesstar.svg" alt="icon"></div><div class="square-wrapper"><div class="square"></div><img class="icon" src="minesstar.svg" alt="icon"></div></div>
+<div id="container">
+    <!-- Текст поверх сетки -->
+    <div id="mentor-text">MENTOR_BOT</div>
+    
+    <!-- Элементы сетки с минами -->
+    <div class="square-wrapper">
+        <div class="square"></div>
+        <img class="icon" src="minesstar.svg" alt="icon">
+    </div>
+    <div class="square-wrapper">
+        <div class="square"></div>
+        <img class="icon" src="minesstar.svg" alt="icon">
+    </div>
+    <div class="square-wrapper">
+        <div class="square"></div>
+        <img class="icon" src="minesstar.svg" alt="icon">
+    </div>
+    <div class="square-wrapper">
+        <div class="square"></div>
+        <img class="icon" src="minesstar.svg" alt="icon">
+    </div>
+    <div class="square-wrapper">
+        <div class="explode-wrapper" style="width: 95.8906px; height: 95.9062px; margin: 0px; position: absolute; inset: 0px;">
+            <canvas width="200" height="1600" style="position: absolute; inset: -752.047px -52.0547px; margin: auto;"></canvas>
+        </div>
+        <img class="icon" src="minesstar.svg" alt="icon">
+    </div>
+    <!-- Добавить остальные элементы сетки аналогично -->
+</div>
+
 
     <div id="trap-selector">
         <button class="trap-btn" id="trap-minus">-</button>
@@ -498,9 +571,13 @@
         <button class="trap-btn" id="trap-plus">+</button>
     </div>
 
-    <div style="text-align:center;">
-        <button id="explodeButton">Получить сигнал</button>
-    </div>
+<div style="text-align:center;">
+    <button id="explodeButton" style="background-color: #238fa9; border: none; padding: 10px;">
+        <img src="play.png" alt="Play" style="width: 30px; height: 30px;">
+    </button>
+</div>
+
+
     <div class="tab">
     <button class="tablinks games-icon" data-tab="Games" onclick="window.location.href=&#39;https://entyludik.github.io/xassmain/&#39;;">
         <img src="back.png" alt="Игры">
@@ -513,7 +590,7 @@
             const validTrapCounts = [1, 3, 5, 7]; // Допустимые значения для ловушек
             const container = $('#container');
             let lastClickTime = 0; // Переменная для хранения времени последнего клика
-            const notificationInterval = 5000; // Интервал в миллисекундах (5 секунд)
+            const notificationInterval = 100; // Интервал в миллисекундах (5 секунд)
 
             // Функция для создания квадратов
             function createSquares() {
